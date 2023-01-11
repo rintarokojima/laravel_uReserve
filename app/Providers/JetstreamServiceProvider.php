@@ -14,7 +14,7 @@ class JetstreamServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // Fortify::ignoreRoutes(); 
+        // Fortify::ignoreRoutes(); Fortify の無効化をする方法
     }
 
     /**
@@ -27,7 +27,7 @@ class JetstreamServiceProvider extends ServiceProvider
         Jetstream::deleteUsersUsing(DeleteUser::class);
     }
 
-    /**
+    /** 
      * Configure the permissions that are available within the application.
      */
     protected function configurePermissions(): void
