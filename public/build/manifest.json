@@ -1,7 +1,12 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-1a393faf.css",
+    "file": "assets/app-a53e4503.css",
     "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/flatpickr.js": {
+    "file": "assets/flatpickr-bdb54236.js",
+    "src": "resources/js/flatpickr.js",
     "isEntry": true
   },
   "resources/js/app.js": {

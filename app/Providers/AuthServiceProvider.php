@@ -30,12 +30,12 @@ class AuthServiceProvider extends ServiceProvider
 
         });
 
-        Gate::define('manager-higeher',function($user){
+        Gate::define('manager-higher',function($user){
             return $user->role > 0 && $user->role <= 5;
 
         });
 
-        Gate::define('user-higeher',function($user){
+        Gate::define('user-higher',function($user){
             return $user->role > 0 && $user->role <= 9;
 
         });
