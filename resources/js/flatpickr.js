@@ -6,21 +6,22 @@ flatpickr("#event_date", {
     minDate: "today",
     maxDate: new Date().fp_incr(30) 
 });
-flatpickr("#start_time", {
+
+flatpickr("#calendar", {
     "locale": Japanese ,
+    // minDate: "today",
+    maxDate: new Date().fp_incr(30) 
+});
+
+const setting = {
+    "locale": Japanese,
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
     time_24hr: true,
-    minTime: "16:00",
-    maxTime: "22:30",
-});
-flatpickr("#end_time", {
-    "locale": Japanese ,
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "H:i",
-    time_24hr: true,
-    minTime: "16:00",
-    maxTime: "22:30",
-});
+    minTime: "10:00",
+    maxTime: "20:00",
+  }
+  
+  flatpickr("#start_time", setting);
+  flatpickr("#end_time", setting);

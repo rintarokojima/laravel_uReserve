@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-c053df4b.css",
+    "file": "assets/app-98555927.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -8,7 +8,7 @@
     "file": "assets/_commonjsHelpers-28e086c5.js"
   },
   "resources/js/flatpickr.js": {
-    "file": "assets/flatpickr-73ae242c.js",
+    "file": "assets/flatpickr-95c1f9dc.js",
     "src": "resources/js/flatpickr.js",
     "isEntry": true,
     "imports": [
