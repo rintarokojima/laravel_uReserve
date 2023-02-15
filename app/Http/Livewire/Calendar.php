@@ -8,8 +8,8 @@ use App\Services\EventService;
 
 class Calendar extends Component
 {
-    public $currenDate;
-    public $currenWeek;
+    public $currentDate;
+    public $currentWeek;
     public $day;
     public $checkDay;
     public $dayOfWeek;
@@ -29,18 +29,16 @@ class Calendar extends Component
 
         for($i = 0; $i < 7 ; $i++){
             $this->day = CarbonImmutable::today()->addDays($i)->format('m月d日');
-            $this->chackDay = CarbonImmutable::today()->addDays($i)->format('Y-m-d');
+            $this->checkDay = CarbonImmutable::today()->addDays($i)->format('Y-m-d');
             $this->dayOfWeek = CarbonImmutable::today()->addDays($i)->dayName;
-            array_push($this->currentWeek,[
-               'day'=> $this->day,
-               'checkDay'=> $this->checkDay,
-               'dayOfWeek'=> $this->dayOfWeek
+            array_push($this->currentWeek, [
+                'day' => $this->day,
+                'checkDay' => $this->checkDay,
+                'dayOfWeek' => $this->dayOfWeek  
             ]);
-
-
-
         }
-        //dd($this->currentWeek);
+
+        // dd($this->currentWeek);
     }
 
     public function getDate($date)
@@ -56,19 +54,16 @@ class Calendar extends Component
 
         for($i = 0; $i < 7 ; $i++){
             $this->day = CarbonImmutable::parse($this->currentDate)->addDays($i)->format('m月d日');
-            $this->chackDay = CarbonImmutable::parse($this->currentDate)->addDays($i)->format('Y-m-d');
+            $this->checkDay = CarbonImmutable::parse($this->currentDate)->addDays($i)->format('Y-m-d');
             $this->dayOfWeek = CarbonImmutable::parse($this->currentDate)->addDays($i)->dayName;
-            array_push($this->currentWeek,[
+            array_push($this->currentWeek, [
                 'day' => $this->day,
-                'checkDay'=> $this->checkDay,
-                'dayOfWeek'=> $this->dayOfWeek
+                'checkDay' => $this->checkDay,
+                'dayOfWeek' => $this->dayOfWeek 
             ]);
         }
 
     }
-
-
-
     public function render()
     {
         return view('livewire.calendar');

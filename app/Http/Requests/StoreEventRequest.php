@@ -13,9 +13,8 @@ class StoreEventRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return true;   //false -> true
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
